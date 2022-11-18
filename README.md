@@ -1,1 +1,1 @@
-# beer-stonks
+# Beer Stonks
