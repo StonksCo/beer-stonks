@@ -16,11 +16,8 @@
     "url": "git+https://github.com/StonksCo/beer-stonks.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "StonksCo",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/StonksCo/beer-stonks/issues"
-  },
   "homepage": "https://github.com/StonksCo/beer-stonks#readme",
   "devDependencies": {
     "@types/express": "^4.17.14",
