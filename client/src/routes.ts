@@ -1,9 +1,9 @@
 import React from 'react';
-import { About } from './views/About';
-import { Calculator } from './views/Calculator';
-import { Home } from './views/Home';
-import { PageNotFound } from './views/PageNotFound';
-import { Stocks } from './views/Stocks';
+
+import { About } from 'views/About';
+import { Calculator } from 'views/Calculator';
+import { Home } from 'views/Home';
+import { Stocks } from 'views/Stocks';
 
 export interface AppRoute {
 	path: string;
@@ -31,10 +31,5 @@ export const routes: AppRoute[] = [
 		path: '/calculator',
 		name: 'Calculator',
 		element: Calculator,
-	},
-	{
-		path: '*',
-		name: 'PageNotFound',
-		element: PageNotFound,
 	},
 ];
