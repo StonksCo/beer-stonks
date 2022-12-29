@@ -4,22 +4,13 @@
 	}
 }
 
-body {
-	height: 100vh;
-	background: linear-gradient(
-		291.3deg,
-		$orange -1.94%,
-		$white-background 47.81%
-	);
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p {
-		cursor: default;
-		user-select: none;
-	}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	cursor: default;
+	user-select: none;
 }
