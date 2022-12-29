@@ -13,7 +13,7 @@ export interface AppRoute {
 
 export const routes: AppRoute[] = [
 	{
-		path: '/home',
+		path: '/',
 		name: 'Home',
 		element: Home,
 	},

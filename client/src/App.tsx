@@ -5,6 +5,8 @@ import { NavbarWrapper } from 'components/navbar-wrapper';
 import { AppRoute, routes } from 'routes';
 import { PageNotFound } from 'views/PageNotFound';
 
+import './App.scss';
+
 export const App: React.FC = () => {
 	const getRoutes = (routes: AppRoute[]) =>
 		routes.map((prop, key) => (
@@ -14,10 +16,12 @@ export const App: React.FC = () => {
 	return (
 		<>
 			<NavbarWrapper routes={routes} />
-			<Routes>
-				{getRoutes(routes)}
-				<Route path="*" element={<PageNotFound />} />
-			</Routes>
+			<div className="container mt-16 mx-auto">
+				<Routes>
+					{getRoutes(routes)}
+					<Route path="*" element={<PageNotFound />} />
+				</Routes>
+			</div>
 		</>
 	);
 };

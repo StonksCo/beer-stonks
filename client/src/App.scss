@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$orange: #f8931f;
+$white-background: rgba(255, 255, 255, 0.77);
+
+body {
+	height: 100vh;
+	background: linear-gradient(
+		291.3deg,
+		$orange -1.94%,
+		$white-background 47.81%
+	);
+}
+
+.orange-highlight {
+	color: $orange;
+}
