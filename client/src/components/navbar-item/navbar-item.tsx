@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { AppRoute } from 'routes';
 
@@ -10,12 +10,17 @@ interface Props {
 export const NavbarItem: React.FC<Props> = ({ route }) => {
 	return (
 		<li>
-			<Link
+			<NavLink
 				to={route.path}
-				className="block py-2 pl-3 pr-4 text-gray-800 hover:text-brly_orange dark:text-slate-50"
+				className={({ isActive }) =>
+					[
+						'block py-2 pl-3 pr-4  hover:text-brly_orange dark:text-slate-50',
+						isActive ? 'text-brly_orange' : 'text-gray-800',
+					].join(' ')
+				}
 			>
 				{route.name}
-			</Link>
+			</NavLink>
 		</li>
 	);
 };
