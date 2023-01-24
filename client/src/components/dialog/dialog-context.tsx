@@ -9,8 +9,3 @@ export const DialogContext = createContext<IState>({
 	open: false,
 	setOpen: () => {},
 });
-
-export const UserContext = createContext({
-	userName: '',
-	setUserName: () => {},
-});
