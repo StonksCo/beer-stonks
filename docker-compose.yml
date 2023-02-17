@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  client:
+    container_name: client
+    image: beerly-dev
+    build: 
+      context: .
+      target: client
+    env_file:
+      - .env
+    volumes:
+      - ./client/src:/app/client/src
+    ports:
+      - 3000:3000
+  
+  server:
+    container_name: server
+    image: beerly-server
+    build: 
+      context: .
+      target: server
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    ports:
+      - ${PORT}:${PORT}
+  
+  dev:
+    container_name: dev
+    image: beerly-dev
+    build: 
+      context: .
+      target: dev
+    env_file:
+      - .env
+    volumes:
+      - ./client/src:/app/client/src
+      - .:/app
+    ports:
+      - 3000:3000
+      - ${PORT}:${PORT}
