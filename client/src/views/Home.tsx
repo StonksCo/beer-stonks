@@ -5,6 +5,8 @@ import React, { useContext } from 'react';
 export const Home: React.FC = () => {
 	const { open, setOpen } = useContext(DialogContext);
 
+	const onDialogActivation = () => setOpen(true);
+
 	return (
 		<div>
 			<h1 className="mb-12 text-5xl font-medium text-gray-900 md:text-5xl lg:text-6xl">
@@ -19,7 +21,7 @@ export const Home: React.FC = () => {
 			</p>
 
 			{open}
-			<button onClick={() => setOpen(true)}>Activate The Dialog</button>
+			<button onClick={onDialogActivation}>Activate The Dialog</button>
 		</div>
 	);
 };
