@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  server:
+    container_name: server
+    image: beerly:0.0.0
+    build: .
+    entrypoint: "yarn server"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT}
+
+  client:
+    container_name: client
+    image: beerly:0.0.0
+    build: .
+    depends_on:
+      - server
+    entrypoint: "yarn client"
+    volumes:
+      - ./client/src:/app/client/src
+    ports:
+      - 3000:3000
